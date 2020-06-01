@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Selenium_basic</groupId>
+	<artifactId>Selenium_basic</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>selenium</name>
+	<description>scripts</description>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+
+		<dependency>
+			<artifactId>image-processing</artifactId>
+			<groupId>org.openimaj</groupId>
+			<version>1.3.10</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>24.1-jre</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.1.0</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.0.0-alpha-4</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>11</release>
+				</configuration>
+			</plugin>
+
+			<!-- // Following plugin executes the testng tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M4</version>
+				<configuration>
+					<!-- // Suite testng xml file to consider for test execution -->
+					<suiteXmlFiles>
+						<suiteXmlFile>src/files/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>
