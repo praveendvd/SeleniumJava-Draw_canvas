@@ -14,7 +14,7 @@ for image processing and edge detection
 #THen run maven test
 
 
-You can use any image
+Currently tested only with PNG , should work with any file
 
 
 
